@@ -25,6 +25,8 @@ loop 1000 times:
 average runtime = (current time - start time) / 2000
 ```
 
+We have provided you with the long input to use for benchmarking.
+
 Use the language of your choosing. We've included starter files for some languages where you can pseudocode, explain your solution and code.
 
 ## Before you start coding:
