@@ -4,6 +4,7 @@ end
 
 if __FILE__ == $PROGRAM_NAME
   puts "Expecting: [-1, 2, 3, 5]"
+  print "=> "
   print selection_sort([3, -1, 5, 2])
 
   puts
