@@ -13,27 +13,27 @@ end
 
 if __FILE__ == $PROGRAM_NAME
   puts "Expecting: [-1, 2, 3, 5]"
-  puts selection_sort([3, -1, 5, 2])
+  print selection_sort([3, -1, 5, 2])
 
   puts
 
   puts "Expecting: []"
-  puts selection_sort([])
+  print selection_sort([])
 
   puts
 
   puts "Expecting: [-1]"
-  puts selection_sort([-1])
+  print selection_sort([-1])
 
   puts
 
   puts "Expecting: [-10, 2, 2, 3, 7]"
-  puts selection_sort([3, 2, 2, 7, -10])
+  print selection_sort([3, 2, 2, 7, -10])
 
   puts
 
   puts "Expecting: [100, 200]"
-  puts selection_sort([100, 200])
+  print selection_sort([100, 200])
 
   puts
   # Don't forget to add your own!
