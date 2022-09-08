@@ -15,6 +15,10 @@ Input: [3, -1, 5, 2]
 Output: [-1, 2, 3, 5]
 ```
 
+You ARE allowed to use a built-in array method to find the minimum value—you need 
+not recreate it algorithmically. Feel free to try it out for an extra challenge, 
+though.
+
 Use the language of your choosing. We've included starter files for some
 languages where you can pseudocode, explain your solution and code.
 
