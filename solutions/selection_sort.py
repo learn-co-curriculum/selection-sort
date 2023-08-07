@@ -1,63 +1,66 @@
 import random
 import time
 
-def selection_sort(list):
+# O(1) space complexity, O(n^2) time complexity
+def selection_sort_in_place(list):
 
-    # THE LONGER WAY OF DOING THE SAME THING AS LINES 26 - 35
+    for i in range(len(list)):
 
-    '''
-    sorted = []
+        min_element = list[i]
 
-    while len(list) > 0:
+        for j in range(i, len(list)):
 
-        min_element = list[0]
+            if list[j] < min_element:
+                min_element = list[j]
 
-        for i in range(len(list)):
+        temp_element_0 = list[i]
 
-            if list[i] < min_element:
-                min_element = list[i]
+        min_element_ind = list.index(min_element)
 
-        sorted.append(min_element)
-        list.remove(min_element)
+        list[i] = min_element
 
-    return sorted
-    '''
+        list[min_element_ind] = temp_element_0
 
-    sorted = []
+    return list
+
+# O(n) space complexity, O(n) time complexity
+def selection_sort_out_of_place(list):
+
+    sorted_list = []
 
     while len(list) > 0:
 
         min_element = min(list)
 
-        sorted.append(min_element)
+        sorted_list.append(min_element)
         list.remove(min_element)
 
-    return sorted
+    return sorted_list
 
 if __name__ == '__main__':
 
     print("Expecting: [-1, 2, 3, 5]")
-    print(selection_sort([3, -1, 5, 2]))
+    print(selection_sort_in_place([3, -1, 5, 2]))
 
     print("")
 
     print("Expecting: []")
-    print(selection_sort([]))
+    print(selection_sort_in_place([]))
 
     print("")
 
     print("Expecting: [-1]")
-    print(selection_sort([-1]))
+    print(selection_sort_in_place([-1]))
 
     print("")
 
     print("Expecting: [-10, 2, 2, 3, 7]")
-    print(selection_sort([3, 2, 2, 7, -10]))
+    print(selection_sort_in_place([3, 2, 2, 7, -10]))
 
     print("")
 
     print("Expecting: [100, 200]")
-    print(selection_sort([100, 200]))
+    print(selection_sort_in_place([100, 200]))
 
     print("")
 
@@ -71,8 +74,8 @@ if __name__ == '__main__':
     start_time = time.time()
 
     for i in range(1000):
-        selection_sort([2, 1])
-        selection_sort(long_input)
+        selection_sort_in_place([2, 1])
+        selection_sort_in_place(long_input)
 
     avg_time = ( time.time() - start_time ) / 2000
 
