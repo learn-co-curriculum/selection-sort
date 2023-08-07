@@ -8,18 +8,20 @@ def selection_sort_in_place(list):
 
         min_element = list[i]
 
-        for j in range(i, len(list)):
+        min_element_index = i
+
+        for j in range(i + 1, len(list)):
 
             if list[j] < min_element:
                 min_element = list[j]
 
-        temp_element_0 = list[i]
+                min_element_index = j
 
-        min_element_ind = list.index(min_element)
+        temp_element_0 = list[i]
 
         list[i] = min_element
 
-        list[min_element_ind] = temp_element_0
+        list[min_element_index] = temp_element_0
 
     return list
 
